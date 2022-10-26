@@ -12,10 +12,10 @@ game.subscribeToConnection((connected) => console.log("connected?", connected));
 
 /**** the good stuff ****/
 
-game.subscribeToEvent("playerMoves", (data, context) => {
+game.subscribeToEvent("playerChats", (data, context) => {
   console.log(
     context?.player?.name ?? context.playerId,
-    "moved in direction",
-    data.playerMoves.direction
+    "send a message",
+    data.playerChats.contents
   );
 });
